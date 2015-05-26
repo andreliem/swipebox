@@ -21,7 +21,10 @@
 				loopAtEnd: false,
 				autoplayVideos: false,
 				queryStringData: {},
-                toggleClassOnLoad: ''
+                toggleClassOnLoad: '',
+
+				// extended options
+				disableMenuHide: false  // disable the hiding of the menu
 			},
 
 			plugin = this,
@@ -484,6 +487,10 @@
 			 * Hide navigation and title bars
 			 */
 			hideBars : function () {
+				if ( plugin.settings.disableMenuHide ) {
+					return;
+				}
+
 				var bars = $( '#swipebox-top-bar, #swipebox-bottom-bar' );
 				if ( this.doCssTrans() ) {
 					bars.removeClass( 'visible-bars' );

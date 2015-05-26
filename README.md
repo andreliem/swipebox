@@ -1,4 +1,4 @@
-Swipebox
+Swipebox Modified
 ================================
 
 A touchable jQuery lightbox.
